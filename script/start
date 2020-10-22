@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require_relative '../init'
+
+require 'component_host'
+
+ComponentHost.start('player-email-address-component') do |host|
+  player_email_address_component_initiator = PlayerEmailAddressComponent::Start.build
+  host.register(player_email_address_component_initiator)
+end
